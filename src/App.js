@@ -3,8 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import CarouselEffect from './components/Carousel/Carousel';
 import Category from './components/Category/Category';
-
-
+import Product from './components/Product/product';
 
 function App() {
   return (
@@ -12,6 +11,7 @@ function App() {
      <Header />
      <CarouselEffect />
      <Category />
+     <Product />
     </div>
   );
 }

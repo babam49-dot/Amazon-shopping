@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from'./header.module.css'
 import LowerHeader from './LowerHeader';
-
+import { Link } from 'react-router-dom';
 
 import {HiOutlineLocationMarker}  from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
@@ -15,8 +15,9 @@ const Header= () => {
     <section>
         <div className={classes.header_container} >
           <div className={classes.logo_container}>
-            <a href="/"><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazon logo" />
-          </a>
+            <Link to="/" >
+            <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazon logo" />
+            </Link>
           <div className={classes.delivery}>
             <span>
           <HiOutlineLocationMarker />
@@ -39,29 +40,29 @@ const Header= () => {
        
      
         <div className={classes.order_container}>
-          <a href='' className={classes.language}>
+          <Link to='' className={classes.language}>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg/500px-Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg.png"
                   alt="Us Flag" />
           <select>
             <option value="">EN</option>
           </select>
-          </a>
+          </Link> 
         
-        <a href=''>
+        <Link to=''>
           
             <p>Sign In</p>
             <span>Account & Lists</span>
-        </a>
-        <a href=''>
+        </Link> 
+        <Link to="/orders">
           <p>returns</p>
           <span>& Orders</span>
-        </a>
+        </Link> 
 
-        <a className={classes.cart}>
+        <Link to="/cart" className={classes.cart}>
           <PiShoppingCartSimpleLight  size={35}/>
 
           <span>0</span>
-        </a>
+        </Link> 
        </div>
       </div>
     </section>
